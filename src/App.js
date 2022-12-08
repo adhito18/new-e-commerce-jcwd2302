@@ -170,7 +170,7 @@ export default function App() {
       try {
         let response = await signInWithPopup(auth, provider)
         setUsername(response.user.email)
-        localStorage.setItem('tokenUid', response.user.uid)
+        localStorage.setItem('tokenUid', `${response.user.uid}`)
               setUsername(response.user.displayName)
               toast('Login success')
               setTimeout(() => {
